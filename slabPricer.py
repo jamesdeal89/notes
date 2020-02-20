@@ -50,7 +50,7 @@ def gradeOfSlab():
                 return basePrice
             else:
                 print("incorrect input, only do 'basic' or 'best'. try again")
-    return  basePrice
+    return basePrice
 
 
 
