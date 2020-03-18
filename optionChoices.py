@@ -14,18 +14,17 @@ completed=0
 def addOneStudent():
     print("one student has been assigned to their two choices of subject")
     print("This will now loop to start for the next student \n current numbers are:")
-    print("biology:",len(biology))
-    print("chemistry:",len(chemistry))
-    print("history:",len(history))
-    print("georgraphy:",len(geography))
-    print("computer science:",len(computerScience))
-    name = ''
-    choice1 = ''
-    choice2 = ''
+    print("biology:",len(biology), biology)
+    print("chemistry:",len(chemistry), chemistry)
+    print("history:",len(history), history)
+    print("geography:",len(geography), geography)
+    print("computer science:",len(computerScience), computerScience)
     global completed
     completed = completed + 1
     if completed < 40:
         start()
+    else:
+        print("the results are now over, above is the final numbers for all 40")
 
 
 
@@ -75,6 +74,7 @@ def addName1():
 
 
 def start():
+    global name
     for x in subject:
         print(x)
     print("here are the subjects you can choose from. These are case sensitive")
