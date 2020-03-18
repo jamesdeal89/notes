@@ -19,6 +19,13 @@ def addOneStudent():
     print("history:",len(history))
     print("georgraphy:",len(geography))
     print("computer science:",len(computerScience))
+    name = ''
+    choice1 = ''
+    choice2 = ''
+    global completed
+    completed = completed + 1
+    if completed < 40:
+        start()
 
 
 
