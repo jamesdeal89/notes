@@ -9,6 +9,24 @@ choice2 = ''
 choice1 = ''
 name = ''
 completed=0
+calculationSubjects=[[biology,"biology"], [chemistry, "chemistry"], [history, "history"], [geography, "geography"], [computerScience, "computer science"]]
+
+
+def nextStage():
+    print("bye bye")
+    input()
+    exit()
+
+
+def checkNumbers():
+    print("These numbers will now be assesed to ensure there are no anomallies and correct pupil amounts")
+    input("press any key and then enter to continue")
+    for x in calculationSubjects:
+        if len(x[0]) < 5:
+            print(x[1], " is not avalible this year, less than 5 pupils")
+            input("press any key and then enter to continue")
+            nextStage()
+            
 
 
 def addOneStudent():
@@ -25,6 +43,8 @@ def addOneStudent():
         start()
     else:
         print("the results are now over, above is the final numbers for all 40")
+        checkNumbers()
+        
 
 
 
@@ -89,8 +109,5 @@ def start():
 
 start()
 
-print(len(biology))
-print(len(chemistry))
-print(len(history))
-print(len(geography))
-print(len(computerScience))
+
+
