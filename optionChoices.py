@@ -9,24 +9,51 @@ choice2 = ''
 choice1 = ''
 name = ''
 completed=0
+allNames = []
 calculationSubjects=[[biology,"biology"], [chemistry, "chemistry"], [history, "history"], [geography, "geography"], [computerScience, "computer science"]]
+anomalyPupils = []
 
+def twoSubjects():
+    print("Now the program will ensure that a persons name has two subjects. and no less or more")
+    for x in range(len(allNames)):
+        totalApear = 0
+        if allNames[x] in calculationSubjects[0][0]:
+            print(allNames[x], " is doing Biology")
+            totalApear = totalApear + 1
 
-def nextStage():
-    print("bye bye")
-    input()
-    exit()
+        if allNames[x] in calculationSubjects[1][0]:
+            print(allNames[x], " is doing Chemistry")
+            totalApear = totalApear + 1
+
+        if allNames[x] in calculationSubjects[2][0]:
+            print(allNames[x], " is doing History")
+            totalApear = totalApear + 1
+
+        if allNames[x] in calculationSubjects[3][0]:
+            print(allNames[x], " is doing Geography")
+            totalApear = totalApear + 1
+
+        if allNames[x] in calculationSubjects[4][0]:
+            print(allNames[x], " is doing CS")
+            totalApear = totalApear + 1
+
+        if totalApear == 2:
+            print(allNames[x]," is clear, they have exactly two subjects")
+            input("press enter to continue")
+        else:
+            print("student ", allNames[x], "has more or less than 2 subjects, he is invalid")
+            input("press enter to continue")
+    
 
 
 def checkNumbers():
     print("These numbers will now be assesed to ensure there are no anomallies and correct pupil amounts")
     input("press any key and then enter to continue")
     for x in calculationSubjects:
-        if len(x[0]) < 5:
-            print(x[1], " is not avalible this year, less than 5 pupils")
+        if len(x[0]) < 5 or len(x[0]) > 15:
+            print(x[1], " is not avalible this year, less than 5 pupils or more than 15.")
             input("press any key and then enter to continue")
-            nextStage()
-            
+    twoSubjects()
 
 
 def addOneStudent():
@@ -39,7 +66,7 @@ def addOneStudent():
     print("computer science:",len(computerScience), computerScience)
     global completed
     completed = completed + 1
-    if completed < 40:
+    if completed < 3:
         start()
     else:
         print("the results are now over, above is the final numbers for all 40")
@@ -101,6 +128,7 @@ def start():
     while True:
         name = input("what is your name?")
         if name.isalpha():
+                allNames.append(name)
                 addName1()
         else:
             print("please try again, no numbers in names")         
