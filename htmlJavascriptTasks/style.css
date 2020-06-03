@@ -1,0 +1,19 @@
+div {
+  width: 10px;
+  height: 10px;
+  float: right;
+}
+
+#clickbox {
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
