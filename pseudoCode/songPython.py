@@ -1,0 +1,5 @@
+favourite = input("What is your favorite song?")
+line1 = input("What's line 1?")
+line2 = input("What's line 2?")
+line3 = input("What's line 3?")
+print(line1 + line2 + line3)

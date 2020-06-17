@@ -1,0 +1,10 @@
+onecent = input("one cent:")
+twocent = input("two cent:")
+fivecent = input("five cent:")
+tencent = input("ten cent:")
+twentycent = input("twenty cent:")
+fiftycent = input("fifty cent:")
+onedolla = input("one dollar:")
+twodolla = input("two dollar:")
+total = (int(onecent)*1+int(twocent)*2+int(fivecent)*5+int(tencent)*10+int(fiftycent)*50+int(onedolla)*100+int(twodolla)*200)/100
+print(total)
